@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="BasicDoughnutChart.css">
+</head>
+
+<body>
+  <figure id="bdc-lorem"></figure>
+  <figure id="bdc-ipsum"></figure>
+  <script type="module">
+    //import { BasicDoughnutChart } from './build/BasicDoughnutChart.min.mjs';
+    import { BasicDoughnutChart } from './BasicDoughnutChart.mjs';
+
+    const doughnut = new BasicDoughnutChart('bdc-lorem', {
+      height: 350,
+      width: 350,
+      strokeWidth: 40,
+      margin: 0.2,
+      labels: true,
+      borderEffect: {
+        strokeWidth: 7,
+        distance: 7,
+        transition: "opacity"
+      }
+    },
+      {
+        values: [17, 19, 7, 20, 37],
+        colors: ['#90f1ef', '#ffd6e0', '#ffef9f', '#c1fba4', '#7bf1a8'],
+        actives: [false, true, false, false, false, false],
+      }
+    );
+    doughnut.draw();
+
+
+
+    const doughnut_2 = new BasicDoughnutChart('bdc-ipsum', {
+      height: 200,
+      width: 200,
+      strokeWidth: 90,
+      labels: false,
+      borderEffect: {
+        strokeWidth: 20,
+        distance: -1,
+      }
+    },
+      {
+        values: [12, 5],
+        colors: ['#75D12E', '#3154BD'],
+        actives: [true, false],
+      }
+    );
+    doughnut_2.draw();
+  </script>
+</body>
+
+</html>
