@@ -6,7 +6,7 @@ export class BasicDoughnutChart {
       options: {
         height: 0,
         width: 0,
-        //change the strokewidth in your config to create a pie chart
+        //change the strokewidth in your config to create a pie chart, depends on the size and the border distance
         strokeWidth: 40,
         margin: 0,
         labels: true,
